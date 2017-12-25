@@ -1,4 +1,6 @@
-#### celery的demo
+## celery的demo
+
+#### 简介
 - celery是一个`任务队列`,同时也`支持任务调度`，强大的生产者消费者模型
 - backend `Results are not enabled by default. In order to do remote procedure calls or keep track of task results in a database`
 - broker `a message transport`
