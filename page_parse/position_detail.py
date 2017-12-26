@@ -16,13 +16,12 @@ def extract_position_detial_info(response,item):
 
 if __name__ == '__main__':
     import  requests
+    from lxml import etree
     url = "https://xiaoyuan.zhaopin.com/job/CC000116133J90000261000"
     response = requests.get(url)
-    from lxml import etree
     html = etree.HTML(response.content.decode())
     item = {}
     item["job_publish_date"] = html.xpath("//li[@id='liJobPublishDate']/text()")
     item["position_detial"]=html.xpath("//p[@class='mt20']/text()")
 
     print(item)
-
